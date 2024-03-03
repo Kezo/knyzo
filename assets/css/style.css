@@ -100,16 +100,20 @@ h1 {
   max-width: 500px;
 }
 
-.divider::after {
+hr.divider {
+  border: none;
+}
+
+hr.divider::after {
   display: inline-block;
   width: calc(100% - 16px);
   padding: 8px;
 }
 
-.divider.purple::after {
+hr.divider:nth-of-type(odd)::after {
   content: url("../image/Purple-line.svg");
 }
 
-.divider.blue::after {
+hr.divider:nth-of-type(even)::after {
   content: url("../image/Blue-line.svg");
 }
